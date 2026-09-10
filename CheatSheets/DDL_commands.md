@@ -1,3 +1,4 @@
+```
 DDL
 │
 ├── Database
@@ -21,3 +22,4 @@ DDL
     ├── RENAME COLUMN
     ├── DROP COLUMN
     └── ADD CONSTRAINT
+```
