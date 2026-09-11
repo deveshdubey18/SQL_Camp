@@ -1,10 +1,10 @@
 ## SQL
 SQL is  Structured Query language. It is use to store data and manipulate the data.
 ### SQL consist of : 
-  - `DDL`
-  - `DML`
-  - `DQL`
-  - `DCL`
+- `DDL`
+- `DML`
+- `DQL`
+- `DCL`
 
 
 ## DDL — Data Definition Language
