@@ -95,8 +95,8 @@ UPDATE <table_name>
 SET <column_name> = <new_value>
 WHERE <condition>;
 ```
-> Important: Always use `WHERE` when you only want to update specific records.
-
+> **Important: Always use `WHERE` when you only want to update specific records.**
+---
 
 
 ### 7. UPDATE MULTIPLE COLUMNS
@@ -132,8 +132,8 @@ Syntax:
 UPDATE <table_name>
 SET <column_name> = <new_value>;
 ```
-> Warning: This updates every record in the table.
-
+> **Warning: This updates every record in the table.**
+---
 
 ### 10. DELETE
 Meaning / Use:
@@ -163,8 +163,8 @@ Syntax:
 ```
 DELETE FROM <table_name>;
 ```
->Warning: This deletes all rows from the table.
-
+> **Warning: This deletes all rows from the table.**
+---
 
 ### 13. DELETE USING MULTIPLE CONDITIONS
 Meaning / Use:
