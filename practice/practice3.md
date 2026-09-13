@@ -10,7 +10,7 @@ DQL also includes different clauses and operators used with `SELECT` to filter, 
 
 ---
 
-> Basic SELECT Operations
+## Basic SELECT Operations
 
 ### 1. SELECT
 Meaning / Use: 
