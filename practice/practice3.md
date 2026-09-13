@@ -53,7 +53,7 @@ SELECT DISTINCT <column_name>
 FROM <table_name>;
 ```
 
-## Different Clauses : 
+# *Filtering* 
 > usually used with `SELECT`
 ### 5. WHERE
 
@@ -216,11 +216,88 @@ FROM <table_name>
 WHERE <column_name> IS NOT NULL;
 ```
 
+# *Sorting & Limiting*
 
+### 18. ORDER BY
 
+Meaning / Use:
+Used to sort query results.
 
+Syntax:
+```
+SELECT *
+FROM <table_name>
+ORDER BY <column_name>;
+```
+> ```By default, the sorting is ascending (ASC).```
 
+### 19. ORDER BY ASC
 
+Meaning / Use:
+Used to sort data in ascending order.
+
+Syntax:
+```
+SELECT *
+FROM <table_name>
+ORDER BY <column_name> ASC;
+```
+
+### 20. ORDER BY DESC
+
+Meaning / Use:
+Used to sort data in descending order.
+
+Syntax:
+```
+SELECT *
+FROM <table_name>
+ORDER BY <column_name> DESC;
+```
+
+### 21. ORDER BY MULTIPLE COLUMNS
+
+Meaning / Use:
+Used to sort results using more than one column.
+
+Syntax:
+```
+SELECT *
+FROM <table_name>
+ORDER BY <column1> ASC, <column2> DESC;
+```
+
+### 22. LIMIT
+
+Meaning / Use:
+Used to restrict the number of rows returned by a query.
+
+Syntax:
+```
+SELECT *
+FROM <table_name>
+LIMIT <number>;
+```
+
+### 23. LIMIT WITH OFFSET
+
+Meaning / Use:
+Used to skip a specified number of rows and then return a limited number of rows.
+
+Syntax:
+```
+SELECT *
+FROM <table_name>
+LIMIT <number> OFFSET <number>;
+```
+
+Example:
+```
+SELECT *
+FROM employees
+LIMIT 5 OFFSET 10;
+```
+> This skips the first 10 rows and returns the next 5 rows.
 
 
 
