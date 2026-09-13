@@ -169,8 +169,9 @@ WHERE <column_name> LIKE '<pattern>';
 
 Meaning / Use:
 Used with LIKE to create search patterns.
-% - Matches zero or more characters.
-_ - Matches only one character
+> *%* - Matches zero or more characters.
+
+> *_* - Matches only one character
 
 Syntax:
 ```
