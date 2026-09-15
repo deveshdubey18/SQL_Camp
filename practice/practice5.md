@@ -320,8 +320,79 @@ FROM managers;
 # *SUBQUERIES*
 A subquery is a query written inside another SQL query.
 
-### 
+### 43. SUBQUERY
+Meaning / Use:
+Used to use the result of one query inside another query.
 
+Syntax:
+```
+SELECT <columns>
+FROM <table_name>
+WHERE <column> <operator> (
+    SELECT <column>
+    FROM <table_name>
+);
+```
+Example:
+```
+SELECT name, salary
+FROM employees
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employees
+);
+```
+> This finds employees whose salary is greater than the average salary.
+
+### 44. EXISTS
+Meaning / Use:
+Used to check whether a subquery returns at least one record.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
+WHERE EXISTS (
+    SELECT <column>
+    FROM <table2>
+    WHERE <condition>
+);
+```
+Example:
+```
+SELECT d.department_name
+FROM departments AS d
+WHERE EXISTS (
+    SELECT 1
+    FROM employees AS e
+    WHERE e.department_id = d.department_id
+);
+```
+
+### 45. NOT EXISTS
+Meaning / Use:
+Used to check whether a subquery returns no records.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
+WHERE NOT EXISTS (
+    SELECT <column>
+    FROM <table2>
+    WHERE <condition>
+);
+```
+Example:
+```
+SELECT d.department_name
+FROM departments AS d
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM employees AS e
+    WHERE e.department_id = d.department_id
+);
+```
 
 
 
