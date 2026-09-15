@@ -260,10 +260,67 @@ JOIN employees AS e2
 ON e1.manager_id = e2.employee_id;
 ```
 
+# *SET OPERATORS*
+Set operators are used to combine the results of multiple SELECT queries.
+```
+UNION
+UNION ALL
+```
 
+### 41. UNION
+Meaning / Use:
+Combines the results of two or more SELECT queries and removes duplicate rows.
 
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
 
+UNION
 
+SELECT <columns>
+FROM <table2>;
+```
+Example:
+```
+SELECT name
+FROM employees
+
+UNION
+
+SELECT name
+FROM managers;
+```
+
+### 42. UNION ALL
+Meaning / Use:
+Combines the results of multiple SELECT queries while keeping duplicate rows.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
+
+UNION ALL
+
+SELECT <columns>
+FROM <table2>;
+```
+Example:
+```
+SELECT name
+FROM employees
+
+UNION ALL
+
+SELECT name
+FROM managers;
+```
+
+# *SUBQUERIES*
+A subquery is a query written inside another SQL query.
+
+### 
 
 
 
