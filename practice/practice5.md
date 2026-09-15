@@ -132,6 +132,141 @@ HAVING AVG(salary) > 50000;
 ```
 > Important : `WHERE` filters rows before grouping, while `HAVING` filters groups after grouping.
 
+# *DQL — JOINS*
+Joins are used to combine data from multiple tables based on related columns.<br>
+*MySQL JOINs* :
+```
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL OUTER JOIN
+CROSS JOIN
+SELF JOIN
+```
+
+### 36. INNER JOIN
+Meaning / Use:
+Returns only the records that have matching values in both tables.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
+INNER JOIN <table2>
+ON <table1>.<column> = <table2>.<column>;
+```
+Example:
+```
+SELECT e.name, d.department_name
+FROM employees AS e
+INNER JOIN departments AS d
+ON e.department_id = d.department_id;
+```
+> Note : Above example tables(employees, departments) are given alias as e, d.
+
+### 37. LEFT JOIN
+Meaning / Use:
+Returns all records from the left table and matching records from the right table.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
+LEFT JOIN <table2>
+ON <table1>.<column> = <table2>.<column>;
+```
+Example:
+```
+SELECT e.name, d.department_name
+FROM employees AS e
+LEFT JOIN departments AS d
+ON e.department_id = d.department_id;
+```
+
+### 38. RIGHT JOIN
+Meaning / Use:
+Returns all records from the right table and matching records from the left table.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
+RIGHT JOIN <table2>
+ON <table1>.<column> = <table2>.<column>;
+```
+Example:
+```
+SELECT e.name, d.department_name
+FROM employees AS e
+RIGHT JOIN departments AS d
+ON e.department_id = d.department_id;
+```
+
+### 38. FULL OUTER JOIN
+Meaning / Use:
+Returns all records from both tables, including matching and non-matching records.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
+FULL OUTER JOIN <table2>
+ON <table1>.<column> = <table2>.<column>;
+```
+Example:
+```
+SELECT e.name, d.department_name
+FROM employees AS e
+FULL OUTER JOIN departments AS d
+ON e.department_id = d.department_id;
+```
+> MySQL does not directly support ```FULL OUTER JOIN```. It can be simulated using ```LEFT JOIN, RIGHT JOIN, and UNION```.
+
+### 39. CROSS JOIN
+Meaning / Use:
+Returns every possible combination of rows from both tables.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table1>
+CROSS JOIN <table2>;
+```
+Example:
+```
+SELECT e.name, d.department_name
+FROM employees AS e
+CROSS JOIN departments AS d;
+```
+
+### 40. SELF JOIN
+Meaning / Use:
+Used to join a table with itself.
+
+Syntax:
+```
+SELECT <columns>
+FROM <table_name> AS a
+JOIN <table_name> AS b
+ON <condition>;
+```
+Example:
+```
+SELECT
+    e1.name AS employee,
+    e2.name AS manager
+FROM employees AS e1
+JOIN employees AS e2
+ON e1.manager_id = e2.employee_id;
+```
+
+
+
+
+
+
+
+
 
 
 
