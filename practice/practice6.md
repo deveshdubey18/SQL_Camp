@@ -170,132 +170,131 @@ FROM 'user1'@'localhost';
 - `DROP USER`
 - `SHOW GRANTS`
 
----
-
-## 1. CREATE USER
-
+### 9. CREATE USER
 **Meaning / Use:**  
 Used to create a new user account in MySQL.
 
 **Syntax:**
-
-```sql
+```
 CREATE USER '<username>'@'<host>'
 IDENTIFIED BY '<password>';
-
+```
 Example:
-
+```
 CREATE USER 'user1'@'localhost'
 IDENTIFIED BY 'password123';
-2. CREATE USER IF NOT EXISTS
+```
 
+### 10. CREATE USER IF NOT EXISTS
 Meaning / Use:
 Creates a new user only if the user does not already exist.
 
 Syntax:
-
+```
 CREATE USER IF NOT EXISTS '<username>'@'<host>'
 IDENTIFIED BY '<password>';
-
+```
 Example:
-
+```
 CREATE USER IF NOT EXISTS 'user1'@'localhost'
 IDENTIFIED BY 'password123';
-3. ALTER USER
+```
 
+### 11. ALTER USER
 Meaning / Use:
 Used to modify an existing MySQL user account.
 
 Syntax:
-
+```
 ALTER USER '<username>'@'<host>'
 IDENTIFIED BY '<new_password>';
-
+```
 Example:
-
+```
 ALTER USER 'user1'@'localhost'
 IDENTIFIED BY 'newpassword123';
+```
+> This changes the user's password.
 
-This changes the user's password.
-
-4. ALTER USER — ACCOUNT LOCK
-
+### 12. ALTER USER — ACCOUNT LOCK
 Meaning / Use:
 Used to lock or unlock a MySQL user account.
 
-Lock Account:
-
+> ***`Lock Account :`***
+```
 ALTER USER '<username>'@'<host>'
 ACCOUNT LOCK;
-
+```
 Example:
-
+```
 ALTER USER 'user1'@'localhost'
 ACCOUNT LOCK;
+```
 
-Unlock Account:
-
+> ***`Unlock Account:`***
+```
 ALTER USER '<username>'@'<host>'
 ACCOUNT UNLOCK;
-
+```
 Example:
-
+```
 ALTER USER 'user1'@'localhost'
 ACCOUNT UNLOCK;
-5. DROP USER
+```
 
+### 13. DROP USER
 Meaning / Use:
 Used to permanently remove a user account from MySQL.
 
 Syntax:
-
+```
 DROP USER '<username>'@'<host>';
-
+```
 Example:
-
+```
 DROP USER 'user1'@'localhost';
-6. DROP USER IF EXISTS
+```
 
+### 14. DROP USER IF EXISTS
 Meaning / Use:
 Deletes a user if the user exists. Prevents an error if the user does not exist.
 
 Syntax:
-
+```
 DROP USER IF EXISTS '<username>'@'<host>';
-
+```
 Example:
-
+```
 DROP USER IF EXISTS 'user1'@'localhost';
+```
 
-### 16. SHOW GRANTS
-
+### 15. SHOW GRANTS
 Meaning / Use:
 Used to display the privileges currently assigned to a MySQL user.
 
 Syntax:
-
+```
 SHOW GRANTS
 FOR '<username>'@'<host>';
-
+```
 Example:
-
+```
 SHOW GRANTS
 FOR 'user1'@'localhost';
+```
+> This shows the permissions granted to user1.
 
-This shows the permissions granted to user1.
-
-17. SHOW GRANTS FOR CURRENT USER
-
+### 16. SHOW GRANTS FOR CURRENT USER
 Meaning / Use:
 Used to display the privileges of the currently logged-in MySQL user.
 
 Syntax:
-
+```
 SHOW GRANTS;
-
+```
 Example:
-
+```
 SHOW GRANTS;
-
+```
 
 
