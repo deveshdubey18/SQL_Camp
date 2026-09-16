@@ -76,14 +76,74 @@ TO 'user1'@'localhost';
 ```
 > ```* means all tables within the specified database.```
 
-### 
+### 4. GRANT PRIVILEGE ON ALL TABLES
+Meaning / Use:
+Used to give a privilege on all tables within a database.
 
+Syntax:
+```
+GRANT <privilege>
+ON <database_name>.*
+TO <user>;
+```
+Example:
+```
+GRANT SELECT
+ON company.*
+TO 'user1'@'localhost';
+```
+> This allows the user to read data from all tables in the company database.
 
+### 5. REVOKE
+Meaning / Use:
+Used to remove a previously granted privilege from a user.
 
+Syntax:
+```
+REVOKE <privilege>
+ON <database_or_table>
+FROM <user>;
+```
+Example:
+```
+REVOKE SELECT
+ON company.employees
+FROM 'user1'@'localhost';
+```
 
+### 6. REVOKE MULTIPLE PRIVILEGES
+Meaning / Use:
+Used to remove multiple privileges from a user.
 
+Syntax:
+```
+REVOKE <privilege1>, <privilege2>
+ON <database_or_table>
+FROM <user>;
+```
+Example:
+```
+REVOKE INSERT, UPDATE
+ON company.employees
+FROM 'user1'@'localhost';
+```
 
+### 7. REVOKE ALL PRIVILEGES
+Meaning / Use:
+Used to remove all privileges from a user for a specified database or table.
 
+Syntax:
+```
+REVOKE ALL PRIVILEGES
+ON <database_or_table>
+FROM <user>;
+```
+Example:
+```
+REVOKE ALL PRIVILEGES
+ON company.*
+FROM 'user1'@'localhost';
+```
 
 
 
