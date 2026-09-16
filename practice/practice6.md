@@ -40,3 +40,52 @@ GRANT SELECT
 ON company.employees
 TO 'user1'@'localhost';
 ```
+
+### 2. GRANT MULTIPLE PRIVILEGES
+Meaning / Use:
+Used to give multiple privileges to a user at the same time.
+
+Syntax:
+```
+GRANT <privilege1>, <privilege2>, <privilege3>
+ON <database_or_table>
+TO <user>;
+```
+Example:
+```
+GRANT SELECT, INSERT, UPDATE
+ON company.employees
+TO 'user1'@'localhost';
+```
+
+### 3. GRANT ALL PRIVILEGES
+Meaning / Use:
+Used to give all available privileges on a specified database or table.
+
+Syntax:
+```
+GRANT ALL PRIVILEGES
+ON <database_or_table>
+TO <user>;
+```
+Example:
+```
+GRANT ALL PRIVILEGES
+ON company.*
+TO 'user1'@'localhost';
+```
+> ```* means all tables within the specified database.```
+
+### 
+
+
+
+
+
+
+
+
+
+
+
+
