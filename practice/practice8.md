@@ -169,6 +169,46 @@ UNTIL counter >= 5
 END REPEAT;
 ```
 
+# LOOPS Controls
+### 13.Leave
+Meaning / Use:
+Used to exit a loop or labeled block immediately.
+
+Syntax:
+```
+LEAVE <label>;
+```
+Example:
+```
+my_loop: LOOP
+
+    IF counter >= 5 THEN
+        LEAVE my_loop;
+    END IF;
+
+END LOOP my_loop;
+```
+
+### 14. ITERATE
+Meaning / Use:
+Skips the remaining statements in the current loop iteration and starts the next iteration.
+
+Syntax:
+```
+ITERATE <label>;
+```
+Example:
+```
+my_loop: LOOP
+
+    SET counter = counter + 1;
+
+    IF counter = 3 THEN
+        ITERATE my_loop;
+    END IF;
+
+END LOOP my_loop;
+```
 
 
 
