@@ -82,8 +82,92 @@ END CASE;
 ```
 
 # LOOPS
+Loops are used to execute a block of SQL statements repeatedly.
 
+***MySQL provides three main loop structures:***
+```
+- LOOP
+- WHILE
+- REPEAT
+```
 
+### 10. LOOP
+Meaning / Use:
+Creates a loop that continues executing until it is explicitly stopped using LEAVE.
+
+Syntax:
+```
+[label:] LOOP
+
+    <statements>;
+
+END LOOP [label];
+```
+Example:
+```
+SET counter = 1;
+
+my_loop: LOOP
+
+    SET counter = counter + 1;
+
+    IF counter >= 10 THEN
+        LEAVE my_loop;
+    END IF;
+
+END LOOP my_loop;
+```
+
+### 11. WHILE LOOP
+Meaning / Use:
+Repeats statements as long as the specified condition is true.
+
+Syntax:
+```
+WHILE <condition> DO
+
+    <statements>;
+
+END WHILE;
+```
+Example:
+```
+SET counter = 1;
+
+WHILE counter <= 5 DO
+
+    SET counter = counter + 1;
+
+END WHILE;
+```
+
+### 12. REPEAT LOOP
+Meaning / Use:
+Repeats statements until the specified condition becomes true.
+- The statements execute at least once.
+
+Syntax:
+```
+REPEAT
+
+    <statements>;
+
+UNTIL <condition>
+
+END REPEAT;
+```
+Example:
+```
+SET counter = 1;
+
+REPEAT
+
+    SET counter = counter + 1;
+
+UNTIL counter >= 5
+
+END REPEAT;
+```
 
 
 
