@@ -28,6 +28,7 @@ END LOOP employee_loop;
 ```
 
 # BEGIN...END
+
 ### 16. BEGIN...END
 Meaning / Use:
 Used to group multiple SQL statements into a single block.
@@ -52,9 +53,12 @@ BEGIN
 
 END;
 ```
+
 # Most IMP in SQL Programmming
+
 # ***Stored Procedures***
-A stored procedure is a predefined group of SQL statements stored inside the database that can be executed whenever required.
+- A stored procedure is a predefined group of SQL statements stored inside the database that can be executed whenever required.
+- DELIMITER ka use Stored Procedures, Functions, Triggers, aur Events create karte time hota hai.
 
 ### 17. CREATE PROCEDURE
 Meaning / Use:
