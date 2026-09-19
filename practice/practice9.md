@@ -31,7 +31,7 @@ END LOOP employee_loop;
 ### 16. BEGIN...END
 Meaning / Use:
 Used to group multiple SQL statements into a single block.
-> It is commonly used inside stored procedures, functions, loops, and conditional statements.
+> ***Important*** It is commonly used inside stored procedures, functions, loops, and conditional statements.
 
 Syntax:
 ```
@@ -52,3 +52,78 @@ BEGIN
 
 END;
 ```
+# Most IMP in SQL Programmming
+# ***Stored Procedures***
+A stored procedure is a predefined group of SQL statements stored inside the database that can be executed whenever required.
+
+### 17. CREATE PROCEDURE
+Meaning / Use:
+Used to create a stored procedure.
+
+Syntax:
+```
+DELIMITER //
+
+CREATE PROCEDURE <procedure_name>()
+BEGIN
+
+    <statements>;
+
+END //
+
+DELIMITER ;
+```
+Example:
+```
+DELIMITER //
+
+CREATE PROCEDURE show_employees()
+BEGIN
+
+    SELECT *
+    FROM employees;
+
+END //
+
+DELIMITER ;
+```
+### 18. CALL
+Meaning / Use:
+Used to execute a stored procedure.
+
+Syntax:
+```
+CALL <procedure_name>();
+```
+Example:
+```
+CALL show_employees();
+```
+
+### 19. DROP PROCEDURE
+Meaning / Use:
+Used to delete an existing stored procedure.
+
+Syntax:
+```
+DROP PROCEDURE <procedure_name>;
+```
+Example:
+```
+DROP PROCEDURE show_employees;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
