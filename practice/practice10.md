@@ -86,13 +86,12 @@ View the result:
 SELECT @salary;
 ```
 
-23. INOUT Parameter
-
+### 22. INOUT Parameter
 Meaning / Use:
 Used when a parameter needs to receive an input value and return a modified value.
 
 Syntax:
-
+```
 CREATE PROCEDURE <procedure_name>(
     INOUT <parameter_name> <data_type>
 )
@@ -101,9 +100,9 @@ BEGIN
     SET <parameter_name> = <new_value>;
 
 END;
-
+```
 Example:
-
+```
 DELIMITER //
 
 CREATE PROCEDURE increase_value(
@@ -116,15 +115,22 @@ BEGIN
 END //
 
 DELIMITER ;
-
+```
 Execute:
-
+```
 SET @value = 20;
 
 CALL increase_value(@value);
 
 SELECT @value;
-
+```
 Result:
-
+```
 30
+```
+
+
+
+
+
+
