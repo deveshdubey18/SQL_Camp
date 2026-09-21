@@ -71,10 +71,22 @@ DELIMITER ;
 ```
 Example:
 ```
-RETURN monthly_salary * 12;
+DELIMITER //
+
+CREATE FUNCTION calculate_annual_salary(
+    monthly_salary DECIMAL(10,2)
+)
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    -- Direct calculation returned
+    RETURN monthly_salary * 12;
+END //
+
+DELIMITER ;
 ```
 
-### 26. DROP FUNCTION
+### 25. DROP FUNCTION
 Meaning / Use:
 Used to delete a stored function.
 
