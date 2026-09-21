@@ -48,13 +48,26 @@ Use the function:
 SELECT annual_salary(60000);
 ```
 
-### 25. RETURN
+### 24. RETURN
 Meaning / Use:
 Used inside a stored function to return a value.
 
 Syntax:
 ```
-RETURN <value>;
+DELIMITER //
+
+CREATE FUNCTION <function_name>(
+    <param1> <datatype>
+)
+RETURNS <return_datatype>
+[DETERMINISTIC | NOT DETERMINISTIC]
+BEGIN
+    -- Declarations & Operations
+    
+    RETURN <expression_or_variable_or_value>;
+END //
+
+DELIMITER ;
 ```
 Example:
 ```
