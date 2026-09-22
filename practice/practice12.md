@@ -73,7 +73,37 @@ Example:
 CLOSE employee_cursor;
 ```
 
+# Full Working Example (Complete Stored Procedure)
 
+```
+DELIMITER //
 
+CREATE PROCEDURE process_employee_salaries()
+BEGIN
+    DECLARE emp_id INT;
+    DECLARE emp_salary DECIMAL(10,2);
+    DECLARE total_salary DECIMAL(10,2) DEFAULT 0.00;
+    DECLARE is_done INT DEFAULT 0;
+    DECLARE emp_cursor CURSOR FOR 
+        SELECT employee_id, salary FROM employees;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET is_done = 1;
+    OPEN emp_cursor;
+    salary_loop: LOOP
+        FETCH emp_cursor INTO emp_id, emp_salary;
+        IF is_done = 1 THEN
+            LEAVE salary_loop;
+        END IF;
+        SET total_salary = total_salary + emp_salary;
+    END LOOP salary_loop;
+    CLOSE emp_cursor;
+    SELECT total_salary AS Total_Company_Payroll;
+END //
+
+DELIMITER ;
+```
+Run Structure:
+```
+CALL process_employee_salaries();
+```
 
 
