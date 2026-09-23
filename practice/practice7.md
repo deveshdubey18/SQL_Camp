@@ -75,6 +75,8 @@ FROM employees
 WHERE employee_id = 1;
 ```
 
+> ## Important: IF, IF...ELSE, loops, DECLARE, cursors, and handlers are procedural constructs primarily used inside MySQL stored programs such as procedures, functions, and triggers. They are not normally executed as standalone SQL queries.
+
 # Conditional Statements
 Conditional statements are used to execute different SQL statements depending on whether a condition is true or false.
 
