@@ -172,7 +172,7 @@ Meaning / Use:
 Executes the trigger before a row is deleted from a table.
 
 Syntax:
-
+```
 CREATE TRIGGER <trigger_name>
 BEFORE DELETE
 ON <table_name>
@@ -180,9 +180,9 @@ FOR EACH ROW
 BEGIN
     <statements>;
 END;
-
+```
 Example:
-
+```
 DELIMITER //
 
 CREATE TRIGGER before_employee_delete
@@ -195,13 +195,14 @@ BEGIN
 END //
 
 DELIMITER ;
-40. AFTER DELETE
+```
 
+### 7. AFTER DELETE
 Meaning / Use:
 Executes the trigger after a row has been deleted from a table.
 
 Syntax:
-
+```
 CREATE TRIGGER <trigger_name>
 AFTER DELETE
 ON <table_name>
@@ -209,9 +210,9 @@ FOR EACH ROW
 BEGIN
     <statements>;
 END;
-
+```
 Example:
-
+```
 DELIMITER //
 
 CREATE TRIGGER after_employee_delete
@@ -224,7 +225,7 @@ BEGIN
 END //
 
 DELIMITER ; 
-
+```
 
 
 
