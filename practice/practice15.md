@@ -28,5 +28,7 @@ DELETE
 ```
 
 Example:
+```
 INSERT INTO employee_log(old_salary)
 VALUES (OLD.salary);
+```
