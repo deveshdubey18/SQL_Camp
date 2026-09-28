@@ -2,7 +2,7 @@
 `View`
 `Index`
 
-# 1. Views
+### 1. Views
 Meaning / Use:
 A View is a virtual table based on the result of a SELECT query. It does not normally store the actual data separately; it displays data from one or more underlying tables.
 
@@ -25,7 +25,7 @@ To use the View:
 SELECT * FROM employee_view;
 ```
 
-# 2. CREATE OR REPLACE VIEW
+### 2. CREATE OR REPLACE VIEW
 Meaning / Use:
 Creates a new View or replaces an existing View with a new definition.
 
