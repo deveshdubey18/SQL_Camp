@@ -53,15 +53,14 @@ WHERE e.salary > (
 );
 ```
 
-3. CTE (Common Table Expression)
-
+### 3. CTE (Common Table Expression)
 Meaning / Use:
 A CTE is a temporary named result set that can be referenced within a SELECT, INSERT, UPDATE, or DELETE statement.
 
-It is defined using the WITH keyword.
+> It is defined using the WITH keyword.
 
 Syntax:
-
+```
 WITH cte_name AS (
     SELECT column1, column2
     FROM table_name
@@ -69,11 +68,11 @@ WITH cte_name AS (
 )
 SELECT *
 FROM cte_name;
-
+```
 Example:
 
-Find employees earning more than 50000:
-
+> Find employees earning more than 50000:
+```
 WITH high_salary AS (
     SELECT employee_id, employee_name, salary
     FROM employees
@@ -81,13 +80,14 @@ WITH high_salary AS (
 )
 SELECT *
 FROM high_salary;
-4. Recursive CTE
+```
 
+### 4. Recursive CTE
 Meaning / Use:
 A Recursive CTE is a CTE that references itself. It is commonly used for hierarchical or sequential data such as employee-manager relationships, organizational structures, and numbers.
 
 Syntax:
-
+```
 WITH RECURSIVE cte_name AS (
     -- Anchor query
     SELECT ...
@@ -101,11 +101,11 @@ WITH RECURSIVE cte_name AS (
 )
 SELECT *
 FROM cte_name;
-
+```
 Example:
 
-Generate numbers from 1 to 5:
-
+> Generate numbers from 1 to 5:
+```
 WITH RECURSIVE numbers AS (
     SELECT 1 AS num
 
@@ -117,21 +117,22 @@ WITH RECURSIVE numbers AS (
 )
 SELECT *
 FROM numbers;
-
+```
 Output:
-
+```
 1
 2
 3
 4
 5
-5. Window Functions
+```
 
+### 5. Window Functions
 Meaning / Use:
 A Window Function performs calculations across a set of related rows without combining those rows into a single result row.
 
-Common Window Functions:
-
+> Common Window Functions:
+```
 Window Functions
 │
 ├── Ranking
@@ -151,28 +152,28 @@ Window Functions
     ├── COUNT()
     ├── MIN()
     └── MAX()
-
+```
 Syntax:
-
+```
 function_name(column_name)
 OVER (
     PARTITION BY column_name
     ORDER BY column_name
 );
-
+```
 Example:
 
-Assign a rank to employees based on salary:
-
+> Assign a rank to employees based on salary:
+```
 SELECT
     employee_name,
     salary,
     RANK() OVER (ORDER BY salary DESC) AS salary_rank
 FROM employees;
+```
 Example with PARTITION BY
-
-Rank employees within each department:
-
+> Rank employees within each department:
+```
 SELECT
     employee_name,
     department,
@@ -182,13 +183,14 @@ SELECT
         ORDER BY salary DESC
     ) AS department_rank
 FROM employees;
-6. UNION
+```
 
+### 6. UNION
 Meaning / Use:
 UNION combines the results of two or more SELECT queries and removes duplicate rows.
 
 Syntax:
-
+```
 SELECT column1, column2
 FROM table1
 
@@ -196,9 +198,9 @@ UNION
 
 SELECT column1, column2
 FROM table2;
-
+```
 Example:
-
+```
 SELECT employee_name
 FROM employees
 
@@ -206,16 +208,15 @@ UNION
 
 SELECT customer_name
 FROM customers;
+```
+> Duplicate names appearing in both results are returned only once.
 
-Duplicate names appearing in both results are returned only once.
-
-7. UNION ALL
-
+### 7. UNION ALL
 Meaning / Use:
 UNION ALL combines the results of two or more SELECT queries and keeps duplicate rows.
 
 Syntax:
-
+```
 SELECT column1, column2
 FROM table1
 
@@ -223,9 +224,9 @@ UNION ALL
 
 SELECT column1, column2
 FROM table2;
-
+```
 Example:
-
+```
 SELECT employee_name
 FROM employees
 
@@ -233,25 +234,25 @@ UNION ALL
 
 SELECT customer_name
 FROM customers;
+```
+> If the same name exists in both tables, it will appear multiple times.
 
-If the same name exists in both tables, it will appear multiple times.
-
-8. Set Operations
-
+### 8. Set Operations
 Meaning / Use:
 Set operations are used to combine or compare the results of multiple SELECT statements.
 
-In MySQL, the commonly used set operation is:
-
+> In MySQL, the commonly used set operation is:
+```
 Set Operations
 │
 ├── UNION
 └── UNION ALL
+```
+> Note: MySQL does not directly support INTERSECT and EXCEPT as standard set operators in the same way some other databases do. Similar results can be achieved using JOIN, EXISTS, NOT EXISTS, or other queries.
 
-Note: MySQL does not directly support INTERSECT and EXCEPT as standard set operators in the same way some other databases do. Similar results can be achieved using JOIN, EXISTS, NOT EXISTS, or other queries.
 
 Syntax:
-
+```
 SELECT ...
 FROM table1
 
@@ -259,9 +260,9 @@ UNION
 
 SELECT ...
 FROM table2;
-
+```
 Example:
-
+```
 SELECT employee_name
 FROM employees
 
@@ -269,6 +270,6 @@ UNION
 
 SELECT customer_name
 FROM customers;
-
+```
 
 
