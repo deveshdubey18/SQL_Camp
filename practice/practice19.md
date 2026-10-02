@@ -121,24 +121,158 @@ Meaning / Use:
 Removes leading and trailing spaces from a string.
 
 Syntax:
-
+```
 TRIM(string);
-
+```
 Example:
-
+```
 SELECT TRIM(employee_name)
 FROM employees;
-
+```
 
 ### 10. REPLACE()
 Meaning / Use:
 Replaces occurrences of a specified string with another string.
 
 Syntax:
-
+```
 REPLACE(string, old_string, new_string);
-
+```
 Example:
-
+```
 SELECT REPLACE(employee_name, 'A', 'X')
 FROM employees;
+```
+
+# 2. Numeric Functions
+Meaning / Use:
+Numeric functions are used to perform mathematical calculations and manipulate numeric values.
+
+### 1. ROUND()
+Meaning / Use:
+Rounds a number to the specified number of decimal places.
+
+Syntax:
+```
+ROUND(number, decimal_places);
+```
+Example:
+```
+SELECT ROUND(125.678, 2);
+```
+Output:
+```
+125.68
+```
+
+### 2. CEIL()
+Meaning / Use:
+Returns the smallest integer greater than or equal to a number.
+
+Syntax:
+```
+CEIL(number);
+```
+Example:
+```
+SELECT CEIL(12.3);
+```
+Output:
+```
+13
+```
+
+### 3. FLOOR()
+Meaning / Use:
+Returns the largest integer less than or equal to a number.
+
+Syntax:
+```
+FLOOR(number);
+```
+Example:
+```
+SELECT FLOOR(12.9);
+```
+Output:
+```
+12
+```
+
+### 4. ABS()
+Meaning / Use:
+Returns the absolute value of a number.
+
+Syntax:
+```
+ABS(number);
+```
+Example:
+```
+SELECT ABS(-25);
+```
+Output:
+```
+25
+```
+
+### 5. MOD()
+Meaning / Use:
+Returns the remainder after division.
+
+Syntax:
+```
+MOD(number, divisor);
+```
+Example:
+```
+SELECT MOD(10, 3);
+```
+Output:
+```
+1
+```
+
+### 6. POWER()
+Meaning / Use:
+Returns a number raised to a specified power.
+
+Syntax:
+```
+POWER(number, power);
+```
+Example:
+```
+SELECT POWER(2, 3);
+```
+Output:
+```
+8
+```
+
+### 7. SQRT()
+Meaning / Use:
+Returns the square root of a number.
+
+Syntax:
+```
+SQRT(number);
+```
+Example:
+```
+SELECT SQRT(64);
+```
+Output:
+```
+8
+```
+
+
+
+
+
+
+
+
+
+
