@@ -138,3 +138,81 @@ Example:
 SELECT DATE_FORMAT(joining_date, '%d-%m-%Y')
 FROM employees;
 ```
+
+# 4. Aggregate Functions
+Meaning / Use:
+Aggregate functions perform calculations on multiple rows and return a single result.
+
+### 1. COUNT()
+Meaning / Use:
+Returns the number of rows or non-NULL values.
+
+Syntax:
+```
+COUNT(column_name);
+```
+Example:
+```
+SELECT COUNT(employee_id)
+FROM employees;
+```
+
+### 2. SUM()
+Meaning / Use:
+Returns the total of numeric values.
+
+Syntax:
+```
+SUM(column_name);
+```
+Example:
+```
+SELECT SUM(salary)
+FROM employees;
+```
+### 3. AVG()
+Meaning / Use:
+Returns the average of numeric values.\
+
+Syntax:
+```
+AVG(column_name);
+```
+Example:
+```
+SELECT AVG(salary)
+FROM employees;
+```
+
+### 4. MIN()
+Meaning / Use:
+Returns the minimum value.
+
+Syntax:
+```
+MIN(column_name);
+```
+Example:
+```
+SELECT MIN(salary)
+FROM employees;
+```
+
+### 5. MAX()
+Meaning / Use:
+Returns the maximum value.
+
+Syntax:
+```
+MAX(column_name);
+```
+Example:
+```
+SELECT MAX(salary)
+FROM employees;
+```
+
+
+
+
+
