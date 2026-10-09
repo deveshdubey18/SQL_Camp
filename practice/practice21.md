@@ -94,3 +94,52 @@ SELECT
     END AS salary_category
 FROM employees;
 ```
+
+# 6. Conversion Functions
+Meaning / Use:
+Conversion functions are used to convert values from one data type or format to another.
+
+### 6.1 CAST()
+Meaning / Use:
+Converts a value from one data type to another.
+
+Syntax:
+```
+CAST(expression AS data_type);
+```
+Example:
+```
+SELECT CAST('100' AS UNSIGNED);
+```
+
+### 6.2 CONVERT()
+Meaning / Use:
+Converts a value to a specified data type.
+
+Syntax:
+```
+CONVERT(expression, data_type);
+```
+Example:
+```
+SELECT CONVERT('100', UNSIGNED);
+```
+
+### 6.3 CONVERT() with character set
+Meaning / Use:
+Converts a string to a specified character set.
+
+Syntax:
+```
+CONVERT(string USING charset);
+```
+Example:
+```
+SELECT CONVERT('Hello' USING utf8mb4);
+```
+
+
+
+
+
+
