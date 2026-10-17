@@ -92,7 +92,8 @@ isolation_level;
 ```
 
 Example:
-```SET GLOBAL TRANSACTION ISOLATION LEVEL READ COMMITTED;
+```
+SET GLOBAL TRANSACTION ISOLATION LEVEL READ COMMITTED;
 ```
 
 > Note: This requires appropriate administrative privileges. New sessions use the new default unless they set their own isolation level.
